@@ -25,3 +25,4 @@ yarn-error.log*
 #files
 /app_strcture.jpeg
 .env
+tmp
