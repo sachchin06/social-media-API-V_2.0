@@ -24,17 +24,17 @@ router.post("/upload", async (req, res) => {
 
   //check image type
   const fileTypes = ["image/jpeg", "image/png", "image/jpg"];
-  const imageSize = 1024;
+  // const imageSize = 1024;
   if (!fileTypes.includes(image.mimetype))
     return res.send("Image formats supported: JPG, PNG, JPEG");
 
   // check image size
-  if (image.size / 1024 > imageSize)
-    return res.send(`Image size should be less than ${imageSize}kb`);
+  // if (image.size / 1024 > imageSize)
+  //   return res.send(`Image size should be less than ${imageSize}kb`);
 
   const cloudFile = await upload(image.tempFilePath);
-  console.log(image.tempFilePath);
-  console.log(cloudFile);
+  // console.log(image.tempFilePath);
+  // console.log(cloudFile);
 
   res.status(201).json({
     message: "Image uploaded successfully",
