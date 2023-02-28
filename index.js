@@ -7,6 +7,7 @@ import authRoutes from "./routes/auth.js";
 import likesRoutes from "./routes/likes.js";
 import commentRoutes from "./routes/comments.js";
 import uploadRoutes from "./routes/fileUpload.js";
+import relationshipRoutes from "./routes/relationships.js";
 
 import cors from "cors";
 import cookieParser from "cookie-parser";
@@ -41,6 +42,7 @@ app.use("/api/posts", postRoutes);
 app.use("/api/auth/", authRoutes);
 app.use("/api/likes", likesRoutes);
 app.use("/api/comments", commentRoutes);
+app.use("/api/relationships", relationshipRoutes);
 app.use("/api/file", uploadRoutes);
 
 const PORT = 8080;
