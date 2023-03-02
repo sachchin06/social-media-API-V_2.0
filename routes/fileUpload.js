@@ -23,10 +23,10 @@ router.post("/upload", async (req, res) => {
   //     }
 
   //check image type
-  const fileTypes = ["image/jpeg", "image/png", "image/jpg"];
+  // const fileTypes = ["image/jpeg", "image/png", "image/jpg"];
   // const imageSize = 1024;
-  if (!fileTypes.includes(image.mimetype))
-    return res.send("Image formats supported: JPG, PNG, JPEG");
+  // if (!fileTypes.includes(image.mimetype))
+  //   return res.send("Image formats supported: JPG, PNG, JPEG");
 
   // check image size
   // if (image.size / 1024 > imageSize)
